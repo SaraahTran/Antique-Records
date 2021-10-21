@@ -43,6 +43,7 @@ class RecordsController extends AppController
         $records = $this->paginate($query);
 
         $this->set(compact('records'));
+
     }
 
     /**

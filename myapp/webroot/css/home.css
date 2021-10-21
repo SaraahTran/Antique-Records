@@ -12,6 +12,7 @@
 }
 body {
     padding: 60px 0;
+    background: #f5f3f2!important;
 }
 header {
     margin-bottom: 60px;
@@ -70,3 +71,10 @@ hr {
     padding: 10px;
     margin: 10px 0;
 }
+
+li{
+    list-style-type: none!important;
+    margin-bottom: 0!important;
+}
+
+

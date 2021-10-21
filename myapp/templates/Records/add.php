@@ -19,13 +19,22 @@
                 <?php
                     echo $this->Form->control('name');
                     echo $this->Form->control('artist');
-                    echo $this->Form->control('year');
+                    echo $this->Form->control('year',[
+                        'min' => 1963,
+                        'max' => date('Y')
+                    ]);
                     echo $this->Form->control('genre');
                     echo $this->Form->control('no_of_disc');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>
+
+            </br>
+            </br>
         </div>
     </div>
 </div>
+
+</br>
+</br>

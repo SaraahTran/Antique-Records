@@ -5,7 +5,7 @@
  */
 ?>
 <div class="records index content">
-    <?= $this->Html->link(__('New Record'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('New Record'), ['action' => 'add'], ['class' => 'button-slide-left']) ?>
     <h3><?= __('Records') ?></h3>
 
 
@@ -22,7 +22,10 @@
         </div>
         <div class="column">
             <?php
-            echo $this->Form->control('year');
+            echo $this->Form->control('year',[
+                'min' => 1963,
+                'max' => date('Y')
+            ]);
             echo $this->Form->control('genre');
             ?>
 
@@ -33,18 +36,18 @@
 
     </div>
 
-
+<hr>
 
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
+                    <th><?= $this->Paginator->sort('ID') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
                     <th><?= $this->Paginator->sort('artist') ?></th>
                     <th><?= $this->Paginator->sort('year') ?></th>
                     <th><?= $this->Paginator->sort('genre') ?></th>
-                    <th><?= $this->Paginator->sort('no_of_disc') ?></th>
+                    <th><?= $this->Paginator->sort('Number_of_Discs') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -58,9 +61,11 @@
                     <td><?= h($record->genre) ?></td>
                     <td><?= $this->Number->format($record->no_of_disc) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $record->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $record->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $record->id], ['confirm' => __('Are you sure you want to delete # {0}?', $record->id)]) ?>
+                        <ul class="action">
+                     <li>  <?= $this->Html->link(__('View'), ['action' => 'view', $record->id]) ?></li>
+                          <li>  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $record->id]) ?></li>
+                       <li> <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $record->id], ['confirm' => __('Are you sure you want to delete # {0}?', $record->id)]) ?></li>
+                        </ul>
                     </td>
                 </tr>
                 <?php endforeach; ?>
