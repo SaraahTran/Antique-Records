@@ -39,8 +39,8 @@
             <a href="<?= $this->Url->build('/') ?>"><span>Antique</span>Records</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
+            <a  href="/">Records</a>
+            <a  href="/genres">Genres</a>
         </div>
     </nav>
     <main class="main">

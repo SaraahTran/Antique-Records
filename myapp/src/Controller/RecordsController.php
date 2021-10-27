@@ -40,6 +40,13 @@ class RecordsController extends AppController
             ]);
         }
 
+        $searchTerm_genre = $this->request->getQuery('genre');
+        if (!empty($searchTerm_genre)){
+            $query->where([
+                'genre LIKE' => '%' . $searchTerm_genre . '%'
+            ]);
+        }
+
         $records = $this->paginate($query);
 
         $this->set(compact('records'));

@@ -263,49 +263,12 @@ li{
     float: right;
 }
 
-span {
-    z-index: 5;
-    position: relative;
-    transition: color 350ms ease;
-}
-.button-slide-left:hover span{
+
+.button-slide-left:hover{
+    background: rgba(124, 101, 87, 0.3);
     color: white;
 }
 
-.button-slide-left::after, .button-slide-left::before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: #b59f8e;
-    color: white;
-    z-index: -1;
-}
 
-.button-slide-left::before {
-    /*   background: blue; */
-    transform: translateX(-100%);
-    z-index: 1;
-}
 
-.button-slide-left:hover:before {
-    transform: translateX(0);
-    transition: transform 350ms ease;
-}
-
-.button-slide-left::after {
-    z-index: 0;
-    transform: translateX(100%);
-    transition: none;
-    transition: transform 350ms ease;
-}
-
-.button-slide-left:hover:after {
-    opacity: 1;
-    transform: translateX(0);
-    transition: transform 350ms 360ms ease;
-}
 

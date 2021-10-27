@@ -26,8 +26,14 @@
                 'min' => 1963,
                 'max' => date('Y')
             ]);
-            echo $this->Form->control('genre');
-            ?>
+
+            ?><br><br>
+            <?php
+            $genre = array('Blues' => 'Blues', 'Jazz' => 'Jazz', 'Rhythm and Blues' => 'Rhythm and Blues', 'Rock and Roll' => 'Rock and Roll', 'Rock' => 'Rock', 'Country' => 'Country', 'Soul' => 'Soul', 'Dance' => 'Dance', 'Hip-Hop' => 'Hip-Hop');
+
+
+            echo $this->Form->select('genre', $genre, array('class' => 'form-control genre', 'placeholder' => 'Genre', 'id' => 'genre', 'empty' => 'Select Genre'));
+           ?>
 
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

@@ -13,6 +13,8 @@
             <?= $this->Html->link(__('List Records'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New Record'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
+
+
     </aside>
     <div class="column-responsive column-80">
         <div class="records view content">
@@ -32,7 +34,10 @@
                 </tr>
                 <tr>
                     <th><?= __('Genre') ?></th>
-                    <td><?= h($record->genre) ?></td>
+                    <td>
+                        <?= $month = array('1' => 'January', '2' => 'February', '3' => 'March', '4' => 'April', '5' => 'May', '6' => 'June', '7' => 'July', '8' => 'August', '9' => 'September', '10' => 'October', '11' => 'November', '12' => 'December');
+
+                        h($record->$month) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

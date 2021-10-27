@@ -33,6 +33,8 @@ class RecordsTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
+
+
     public function initialize(array $config): void
     {
         parent::initialize($config);
@@ -40,6 +42,12 @@ class RecordsTable extends Table
         $this->setTable('records');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
+
+        $this->belongsTo('Genres', [
+            'className' => 'genre.id'
+        ])
+            ->setForeignKey('genre')
+            ->setProperty('genre');
     }
 
     /**
