@@ -1,8 +1,10 @@
-#FIT2104 Assignment 3
+# FIT2104 Assignment 3
 
-Name: Sarah Tran
-Student ID: 30584930
-Date of Submission: 31/10/21
+<b>Name:</b> Sarah Tran
+
+<b>Student ID:</b> 30584930
+
+<b>Date of Submission:</b> 31/10/21
 
 
-Database File: database.sql
+<b>Database File:</b> database.sql
