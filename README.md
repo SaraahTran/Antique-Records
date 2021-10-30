@@ -7,4 +7,4 @@
 <b>Date of Submission:</b> 31/10/21
 
 
-<b>Database File:</b> database.sql
+<b>Database Schema File:</b> schema.sql
