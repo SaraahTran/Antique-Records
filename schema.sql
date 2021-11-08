@@ -8,6 +8,24 @@ CREATE TABLE `records` (
   PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `genres` (
+  `id` int(11) AUTO_INCREMENT NOT NULL,
+  `name` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `genres` VALUES
+    (1,'Blues'),
+    (2,'Jazz'),
+    (3,'Rhythm and Blues'),
+    (4,'Rock and Roll'),
+    (5,'Rock'),
+    (6,'Country'),
+    (7,'Soul'),
+    (8,'Dance'),
+    (9,'Hip-Hop');
+
+
 INSERT INTO records VALUES
     (1,'cursus purus. Nullam scelerisque neque sed sem','Ignatius Moreno',1966,'Soul',2),
     (2,'dui nec urna suscipit nonummy. Fusce fermentum','Samuel Valenzuela',1989,'Blues',4),
